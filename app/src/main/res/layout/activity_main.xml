@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/passwordTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Senha Gerada"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp" />
+
+    <EditText
+        android:id="@+id/passwordLengthEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Comprimento da Senha"
+        android:inputType="number"
+        android:layout_below="@id/passwordTextView"
+        android:layout_marginBottom="10dp"/>
+
+    <CheckBox
+        android:id="@+id/uppercaseCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Incluir Letras Maiúsculas"
+        android:layout_below="@id/passwordLengthEditText"
+        android:layout_marginBottom="10dp"/>
+
+    <CheckBox
+        android:id="@+id/lowercaseCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Incluir Letras Minúsculas"
+        android:layout_below="@id/uppercaseCheckBox"
+        android:layout_marginBottom="10dp"/>
+
+    <CheckBox
+        android:id="@+id/numbersCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Incluir Números"
+        android:layout_below="@id/lowercaseCheckBox"
+        android:layout_marginBottom="10dp"/>
+
+    <CheckBox
+        android:id="@+id/similarCharactersCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Excluir Caracteres Semelhantes (l, 1, I, O, 0)"
+        android:layout_below="@id/numbersCheckBox"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/generateButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gerar Senha"
+        android:layout_below="@id/similarCharactersCheckBox"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/copyButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Copiar Senha"
+        android:layout_below="@id/generateButton"/>
+
+</RelativeLayout>
